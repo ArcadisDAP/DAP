@@ -1,0 +1,91 @@
+﻿{"frames": {
+
+"CachedBmp_184":
+{
+	"frame": {"x":1829,"y":0,"w":142,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":142,"h":139},
+	"sourceSize": {"w":142,"h":139}
+},
+"CachedBmp_186":
+{
+	"frame": {"x":0,"y":1670,"w":1972,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1972,"h":72},
+	"sourceSize": {"w":1972,"h":72}
+},
+"CachedBmp_188":
+{
+	"frame": {"x":0,"y":1264,"w":1471,"h":404},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1471,"h":404},
+	"sourceSize": {"w":1471,"h":404}
+},
+"CachedBmp_190":
+{
+	"frame": {"x":1502,"y":0,"w":325,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":325,"h":139},
+	"sourceSize": {"w":325,"h":139}
+},
+"CachedBmp_192":
+{
+	"frame": {"x":0,"y":858,"w":1471,"h":404},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1471,"h":404},
+	"sourceSize": {"w":1471,"h":404}
+},
+"CachedBmp_194":
+{
+	"frame": {"x":1502,"y":141,"w":280,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":280,"h":139},
+	"sourceSize": {"w":280,"h":139}
+},
+"CachedBmp_196":
+{
+	"frame": {"x":0,"y":452,"w":1471,"h":404},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1471,"h":404},
+	"sourceSize": {"w":1471,"h":404}
+},
+"CachedBmp_198":
+{
+	"frame": {"x":1784,"y":141,"w":165,"h":158},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":165,"h":158},
+	"sourceSize": {"w":165,"h":158}
+},
+"CachedBmp_202":
+{
+	"frame": {"x":1473,"y":452,"w":495,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":495,"h":450},
+	"sourceSize": {"w":495,"h":450}
+},
+"CachedBmp_203":
+{
+	"frame": {"x":0,"y":0,"w":1500,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1500,"h":450},
+	"sourceSize": {"w":1500,"h":450}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.10.14",
+	"image": "ScratchToRevealV2 _25.07.21__atlas_2.png",
+	"format": "undefined",
+	"size": {"w":2048,"h":2048},
+	"scale": "1"
+}
+}
