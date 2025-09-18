@@ -1865,7 +1865,7 @@ if (reversed == null) { reversed = false; }
 		    };
 		    xhr.send(null);
 		}
-		loadJSON('glossary.json', function(data) {
+		loadJSON('https://arcadisdap.github.io/DAP/EDA_pages/Glossary/Glossary.json', function(data) {
 		    data.sort(function(a, b) {
 		        return a.term.toLowerCase().localeCompare(b.term.toLowerCase());
 		    });
@@ -2211,4 +2211,5 @@ function handleComplete(evt,comp) {
 		</div>
 	</div>
 </body>
+
 </html>
