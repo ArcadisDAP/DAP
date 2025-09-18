@@ -1,0 +1,132 @@
+[
+  {
+    "term": "Asset Investment Planning (AIP)",
+    "description": "Enhances complex, longer-term tactical and strategic decisions relating to the CAPEX/OPEX budget allocations and overall asset management planning.  AIP systems leverage asset data (primarily sourced from APM and EAM systems) to predict the current and future performance of the asset base over a pedefined horizon (usually over a year). As a consequence of major global disruptions in the last couple of years and impacts of the climate change, more and more executives are turning toward AIP software solutions to support and improve these decision making processes.",
+    "course": [1]
+  },
+  {
+    "term": "Asset Performance Management (APM)",
+    "description": "Primarily support the daily or weekly operational decisions and act to improve the reliability and availability of the assets.",
+    "course": [0]
+  },
+  {
+    "term": "Boolean Logic",
+    "description": "Interventions determined by rules on assets - when the rule is breached, the intervention is forced. No target can be set for the model",
+    "course": [0]
+  },
+  {
+    "term": "Enterprise Asset Management (EAM)",
+    "description": "Primarily support the daily or weekly operational decisions and act to improve the reliability and availability of the assets.",
+    "course": [0]
+  },
+  {
+    "term": "GA Optimizations",
+    "description": "Advance iterative search and refinement algorithms. Multiple constraints, minimise whole life cost objective. Ultimate flexibility given ultimate investment efficiency.",
+    "course": [0]
+  },
+  {
+    "term": "EDA Asset",
+    "description": "EDA Asset is one of the two modules of Enterprise Decision Analytics where it enables users to integrate different disparate data sources, analyze and optimize the data in order to increase efficiency and ensure that they are performing the right work, on the right assets at the right time.",
+    "course": [1]
+  },
+  {
+    "term": "EDA Portfolio",
+    "description": "EDA Portfolio is the other half of the Enterprise Decision Analytics module where it allows organization to make informed decisions about investment planning, visualize and provide data driven, optimal investment plans to the regulators, stakeholders and customers.",
+    "course": [1]
+  },
+  {
+    "term": "Enterprise Decision Analytics (EDA)",
+    "description": "Is a highly configurable, intergrated platform for decision analytics, on top of which task-specific course are built for asset investment planning, and project & portfolio optimization.",
+    "course": [0]
+  },
+  {
+    "term": "Linear Optimization",
+    "description": "Advance matrix-based algorithm. Multiple constrains are applied to the model for budget and/or performance. Objective is the minimization of a given function at each time interval.",
+    "course": [0]
+  },
+  {
+    "term": "Non-Linear Optimization",
+    "description": "Multiple constraints are applied, with lowest Whole Life Cost the objective. Ability to consider interventions across time gives ultimate investment efficiency.",
+    "course": [0]
+  },
+  {
+    "term": "Optimization",
+    "description": "Optimization is the process of finding the best way to manage your assets so that you get the maximum benefit, value, or performance while using the least number of resources, such as money, time, or effort.",
+    "course": [1]
+  },
+  {
+    "term": "Prioritization",
+    "description": "Prioritization is choosing what to work on first, so you solve the most important problems and get the best results from your asset management efforts. In contrast to optimization, prioritization focuses on funding the ''most important'' projects, but can lead to underinvestment in supporting areas or infrastructure.",
+    "course": [1]
+  },
+  {
+    "term": "Triggers",
+    "description": "Interventions triggered by rules on assets when the condition is met, the intervention is applied.",
+    "course": [2]
+  },
+  {
+    "term": "Projects",
+    "description": "A set of service and/or cost requirements outlining a business need that is not currently being met.",
+    "course": [2]
+  },
+  {
+    "term": "Solutions",
+    "description": "A means of accomplishing the requirements set out by a project in terms of capital spend, operational savings, and expected service improvements.",
+    "course": [0]
+  },
+  {
+    "term": "Measures",
+    "description": "Service, performance, cost, and other metrics that change over time that can be altered using the investment options available to the project (i.e. solutions)",
+    "course": [0]
+  },
+  {
+    "term": "Attributes",
+    "description": "Static descriptive data about the project, typically things like physical characteristics, and other parameters, that do not change with time or investment.",
+    "course": [0]
+  },
+  {
+    "term": "Timesteps",
+    "description": "A unit of time over which cost, service and performance are measured or predicted. May be annual or based on a regulatory investment period.",
+    "course": [0]
+  },
+  {
+    "term": "Do Nothing",
+    "description": "The predicted costs, service and performance expected when no capital investment options are selected.",
+    "course": [0]
+  },
+  {
+    "term": "Benefit",
+    "description": "The improvement to service and performance resulting from choosing a solution for a project.",
+    "course": [0]
+  },
+  {
+    "term": "Duration/ Time to Benefit",
+    "description": "The number of timesteps after the point of selection that the solution takes to realise its benefits.",
+    "course": [0]
+  },
+  {
+    "term": "Scenarios",
+    "description": "A scenario is a specific set of targets the optimiser is tasked with meeting.",
+    "course": [0]
+  },
+  {
+    "term": "Goals",
+    "description": "The objective of the optimisation, a measure of how well it is performing at a global level and allowing options to be weighed against each other. Typical goals in commercial settings might be “to minimise the total cost of solutions”",
+    "course": [0]
+  },
+  {
+    "term": "Constraints/ Bounds",
+    "description": "A limitation placed on the optimiser that it must meet using the selected set of solutions. Typical bounds would be to “maintain the current level of service for the next 5 timesteps” or “do not exceed a capital investment total of $xx per timestep”",
+    "course": [0]
+  },
+  {
+    "term": "Net Present Value",
+    "description": "The total cost of the project or solution adjusted for inflation and other factors over its expected life",
+    "course": [0]
+  },
+  {
+    "term": "Discount Rate",
+    "description": "The change in the value of a currency over time",
+    "course": [0]
+  }
+]
