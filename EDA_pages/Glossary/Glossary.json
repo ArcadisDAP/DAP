@@ -62,12 +62,12 @@
   {
     "term": "Triggers",
     "description": "Interventions triggered by rules on assets when the condition is met, the intervention is applied.",
-    "course": [2]
+    "course": [0]
   },
   {
     "term": "Projects",
     "description": "A set of service and/or cost requirements outlining a business need that is not currently being met.",
-    "course": [2]
+    "course": [0]
   },
   {
     "term": "Solutions",
@@ -129,4 +129,5 @@
     "description": "The change in the value of a currency over time",
     "course": [0]
   }
+
 ]
