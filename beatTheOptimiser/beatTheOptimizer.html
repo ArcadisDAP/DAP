@@ -20370,12 +20370,12 @@ if (reversed == null) { reversed = false; }
 		    resultsBreakdown.txt_points.text = this.lastCurrentPoints[this.roundNum-1];
 		    resultsBreakdown.txt_points.color = (this.lastCurrentPoints[this.roundNum-1] >= optimiserDefinedScore[this.roundNum-1]) ? "#0C0808" : "#da291c";
 		    resultsBreakdown.txt_cost.text = "$ " + this.lastCurrentCost[this.roundNum-1];
-		    resultsBreakdown.txt_cost.color = (this.lastCurrentCost[this.roundNum-1] > maxCost[roundNum-1]) ? "#da291c" : "#0C0808";
+		    resultsBreakdown.txt_cost.color = (this.lastCurrentCost[this.roundNum-1] > maxCost[this.roundNum-1]) ? "#da291c" : "#0C0808";
 		    resultsBreakdown.txt_time2.text = (this.timerDuration > this.lastCurrentTime[this.roundNum-1]) ? this.timerDuration - this.lastCurrentTime[this.roundNum-1] : this.timerDuration;
 		    resultsBreakdown.txt_points2.text = this.lastCurrentPoints[this.roundNum-1];
 			resultsBreakdown.txt_points2.color = (this.lastCurrentPoints[this.roundNum-1] >= optimiserDefinedScore[this.roundNum-1]) ? "#0C0808" : "#da291c";
 		    resultsBreakdown.txt_cost2.text = "$ " + this.lastCurrentCost[this.roundNum-1];
-		    resultsBreakdown.txt_cost2.color = (this.lastCurrentCost[this.roundNum-1] > maxCost[roundNum-1]) ? "#da291c" : "#0C0808";
+		    resultsBreakdown.txt_cost2.color = (this.lastCurrentCost[this.roundNum-1] > maxCost[this.roundNum-1]) ? "#da291c" : "#0C0808";
 			resultsBreakdown.txt_resultMessage.text = resultFeedbackMessage.call(this);
 		    this.levelResultsScroll[this.roundNum - 1] = this.levelResultsScroll[this.roundNum - 1] || { value: 0 };
 		    var contentHeight = resultsBreakdown.nominalBounds
