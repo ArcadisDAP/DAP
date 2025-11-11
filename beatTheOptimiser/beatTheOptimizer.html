@@ -46,7 +46,7 @@
         left: 30px; 
         color: #0C0808;
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 7px;
         letter-spacing: 1px;
         white-space: nowrap;
 		opacity:10%;
@@ -21940,8 +21940,8 @@ if (reversed == null) { reversed = false; }
 		    // --- CRITICAL CENTERING CSS SETUP ---
 		    // Apply initial position and the transform for centering.
 		    videoElement.style.position = 'absolute'; 
-		    videoElement.style.transform = 'translate(-50%, -50%)'; // <-- CRITICAL for centering
-		    videoElement.style.transformOrigin = 'center center';   // <-- Ensures scaling is from the center
+		    //videoElement.style.transform = 'translate(-50%, -50%)'; // <-- CRITICAL for centering
+		    //videoElement.style.transformOrigin = 'center center';   // <-- Ensures scaling is from the center
 		    const canvasParent = stage.canvas.parentElement || document.body;
 		    canvasParent.appendChild(videoElement);
 		    mcContainer._htmlVideoElement = videoElement;
