@@ -22104,8 +22104,8 @@ if (reversed == null) { reversed = false; }
 		    videoElement.loop = false;
 		    videoElement.muted = this.isMuted; 
 		    videoElement.style.position = 'absolute'; 
-		    videoElement.style.transform = 'translate(-50%, -50%)'; // video scale
-		    videoElement.style.transformOrigin = 'center center';   // video center
+		    //videoElement.style.transform = 'translate(-50%, -50%)'; // video scale
+		    //videoElement.style.transformOrigin = 'center center';   // video center
 		    const canvasParent = stage.canvas.parentElement || document.body;
 		    canvasParent.appendChild(videoElement);
 		    mcContainer._htmlVideoElement = videoElement;
@@ -22132,12 +22132,14 @@ if (reversed == null) { reversed = false; }
 				const canvasHeightRaw = stage.canvas.height;
 		        const mcWidth = mcContainer.nominalBounds.width;
 		        const mcHeight = mcContainer.nominalBounds.height;
+				
 		        const finalWidth = mcWidth * scale;
 		        const finalHeight = mcHeight * scale;
-				//videoElement.style.left = ((canvasWidthRaw/2) - (finalWidth/2)) + 'px';
-		       // videoElement.style.top = ((canvasHeightRaw/2) - (finalHeight/2)) + 'px';
-		        //videoElement.style.width = finalWidth + 'px';
-		        //videoElement.style.height = finalHeight + 'px';
+				console.log(mcContainer.nominalBounds.width + " " + mcContainer.nominalBounds.height + " " + finalWidth + " " + finalHeight);
+				videoElement.style.left = ((canvasWidthRaw/2) - (finalWidth/2)) + 'px';
+		        videoElement.style.top = ((canvasHeightRaw/2) - (finalHeight/2)) + 'px';
+		        videoElement.style.width = finalWidth + 'px';
+		        videoElement.style.height = finalHeight + 'px';
 		    }
 		}
 		this.removeVideoFromStage = function(mcContainer) {
@@ -23265,7 +23267,7 @@ function handleComplete(evt,comp) {
         <img src="assets/preloader.gif?1762869185927" alt="LOADING" />
     </div>
 	<div id="copyright_text">
-        DAPTeam@2025 V1.0 T1
+        DAPTeam@2025 V1.0 T2
     </div>
 </body>
 </html>
