@@ -22125,28 +22125,51 @@ if (reversed == null) { reversed = false; }
 		}
 		function updateVideoPosition() {
 		    const mcContainer = this.obj_pages.obj_how2;
-		    const videoElement = mcContainer ? mcContainer._htmlVideoElement : null;
-		    if (videoElement && stage.canvas && mcContainer.nominalBounds) {
-				const scaleX = stage.scaleX || 1; 
-				const scaleY = stage.scaleY || 1; 
-				
-				const canvasRect = stage.canvas.getBoundingClientRect();
-
-				const mcCenterLocalX = mcContainer.x + (mcContainer.nominalBounds.width / 2);
-				const mcCenterLocalY = mcContainer.y + (mcContainer.nominalBounds.height / 2);
-
-				const mcCenterXOnScreen = canvasRect.left + (mcCenterLocalX * scaleX);
-				const mcCenterYOnScreen = canvasRect.top + (mcCenterLocalY * scaleY);
-
-				const finalWidth = mcContainer.nominalBounds.width * scaleX;
-				const finalHeight = mcContainer.nominalBounds.height * scaleY;
-				
-				videoElement.style.width = finalWidth + 'px';
-				videoElement.style.height = finalHeight + 'px';
-
-				videoElement.style.left = mcCenterXOnScreen + 'px';
-				videoElement.style.top = mcCenterYOnScreen + 'px';
+			const videoElement = mcContainer ? mcContainer._htmlVideoElement : null;
+			
+			// Check for necessary elements
+			if (!videoElement || !stage.canvas || !mcContainer.nominalBounds) {
+				return;
 			}
+
+			// 1. Get the global position and scale of the Stage
+			const scaleX = stage.scaleX || 1; 
+			const scaleY = stage.scaleY || 1; 
+
+			// 2. Get the Canvas's Rect (position relative to viewport)
+			const canvasRect = stage.canvas.getBoundingClientRect();
+			const canvasGlobalX = canvasRect.left;
+			const canvasGlobalY = canvasRect.top;
+
+			// 3. Determine the MovieClip's Top-Left Corner on the Stage (Stage coordinates: 0 to 1280)
+			// We assume the MC's registration point (x, y) is the top-left of the video area.
+			const mcStageX = mcContainer.x;
+			const mcStageY = mcContainer.y;
+			
+			// 4. Calculate the video's size on the screen
+			const mcNominalWidth = mcContainer.nominalBounds.width;
+			const mcNominalHeight = mcContainer.nominalBounds.height;
+			
+			const finalWidth = mcNominalWidth * scaleX;
+			const finalHeight = mcNominalHeight * scaleY;
+			
+			videoElement.style.width = finalWidth + 'px';
+			videoElement.style.height = finalHeight + 'px';
+
+			// 5. Calculate the video's Center Point on the Screen (CRITICAL CALCULATION)
+			// A video element's position is its top-left corner.
+			// If we want the center of the video (V_center) to match the center of the MC (MC_center),
+			// we must position the video's top-left corner (V_top_left) at:
+			// V_top_left = MC_center - (V_size / 2)
+
+			const mcCenterXOnScreen = canvasGlobalX + (mcStageX + (mcNominalWidth / 2)) * scaleX;
+			const mcCenterYOnScreen = canvasGlobalY + (mcStageY + (mcNominalHeight / 2)) * scaleY;
+
+			// Apply Position
+			// We set left/top to the desired center point on the screen.
+			// The previously restored CSS rule 'transform: translate(-50%, -50%)' handles the final offset.
+			videoElement.style.left = mcCenterXOnScreen + 'px';
+			videoElement.style.top = mcCenterYOnScreen + 'px';
 		}
 		this.removeVideoFromStage = function(mcContainer) {
 		    if (mcContainer && mcContainer._htmlVideoElement) {
@@ -23273,7 +23296,7 @@ function handleComplete(evt,comp) {
         <img src="assets/preloader.gif?1762869185927" alt="LOADING" />
     </div>
 	<div id="copyright_text">
-        DAPTeam@2025 V1.0 T4
+        DAPTeam@2025 V1.0 T5
     </div>
 </body>
 </html>
