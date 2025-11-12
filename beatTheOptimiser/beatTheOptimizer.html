@@ -22104,8 +22104,8 @@ if (reversed == null) { reversed = false; }
 		    videoElement.loop = false;
 		    videoElement.muted = this.isMuted; 
 		    videoElement.style.position = 'absolute'; 
-		    //videoElement.style.transform = 'translate(-50%, -50%)'; // video scale
-		    //videoElement.style.transformOrigin = 'center center';   // video center
+		    videoElement.style.transform = 'translate(-50%, -50%)'; // video scale
+		    videoElement.style.transformOrigin = 'center center';   // video center
 		    const canvasParent = stage.canvas.parentElement || document.body;
 		    canvasParent.appendChild(videoElement);
 		    mcContainer._htmlVideoElement = videoElement;
@@ -22126,15 +22126,17 @@ if (reversed == null) { reversed = false; }
 		function updateVideoPosition() {
 		    const mcContainer = this.obj_pages.obj_how2;
 		    const videoElement = mcContainer ? mcContainer._htmlVideoElement : null;
-		    if (videoElement && stage.canvas) {
-        
+		    if (videoElement && stage.canvas && mcContainer.nominalBounds) {
 				const scaleX = stage.scaleX || 1; 
 				const scaleY = stage.scaleY || 1; 
-
+				
 				const canvasRect = stage.canvas.getBoundingClientRect();
 
-				const mcCenterXOnScreen = canvasRect.left + (mcContainer.x + (mcContainer.nominalBounds.width / 2)) * scaleX;
-				const mcCenterYOnScreen = canvasRect.top + (mcContainer.y + (mcContainer.nominalBounds.height / 2)) * scaleY;
+				const mcCenterLocalX = mcContainer.x + (mcContainer.nominalBounds.width / 2);
+				const mcCenterLocalY = mcContainer.y + (mcContainer.nominalBounds.height / 2);
+
+				const mcCenterXOnScreen = canvasRect.left + (mcCenterLocalX * scaleX);
+				const mcCenterYOnScreen = canvasRect.top + (mcCenterLocalY * scaleY);
 
 				const finalWidth = mcContainer.nominalBounds.width * scaleX;
 				const finalHeight = mcContainer.nominalBounds.height * scaleY;
@@ -23271,7 +23273,7 @@ function handleComplete(evt,comp) {
         <img src="assets/preloader.gif?1762869185927" alt="LOADING" />
     </div>
 	<div id="copyright_text">
-        DAPTeam@2025 V1.0 T3
+        DAPTeam@2025 V1.0 T4
     </div>
 </body>
 </html>
