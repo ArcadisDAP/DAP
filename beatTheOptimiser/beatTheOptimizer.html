@@ -22127,20 +22127,24 @@ if (reversed == null) { reversed = false; }
 		    const mcContainer = this.obj_pages.obj_how2;
 		    const videoElement = mcContainer ? mcContainer._htmlVideoElement : null;
 		    if (videoElement && stage.canvas) {
-		        const scale = stage.scaleX;
-		        const canvasWidthRaw = stage.canvas.width;
-				const canvasHeightRaw = stage.canvas.height;
-		        const mcWidth = mcContainer.nominalBounds.width;
-		        const mcHeight = mcContainer.nominalBounds.height;
+        
+				const scaleX = stage.scaleX || 1; 
+				const scaleY = stage.scaleY || 1; 
+
+				const canvasRect = stage.canvas.getBoundingClientRect();
+
+				const mcCenterXOnScreen = canvasRect.left + (mcContainer.x + (mcContainer.nominalBounds.width / 2)) * scaleX;
+				const mcCenterYOnScreen = canvasRect.top + (mcContainer.y + (mcContainer.nominalBounds.height / 2)) * scaleY;
+
+				const finalWidth = mcContainer.nominalBounds.width * scaleX;
+				const finalHeight = mcContainer.nominalBounds.height * scaleY;
 				
-		        const finalWidth = mcWidth * scale;
-		        const finalHeight = mcHeight * scale;
-				console.log(mcContainer.nominalBounds.width + " " + mcContainer.nominalBounds.height + " " + finalWidth + " " + finalHeight);
-				videoElement.style.left = ((canvasWidthRaw/2) - (finalWidth/2)) + 'px';
-		        videoElement.style.top = ((canvasHeightRaw/2) - (finalHeight/2)) + 'px';
-		        videoElement.style.width = finalWidth + 'px';
-		        videoElement.style.height = finalHeight + 'px';
-		    }
+				videoElement.style.width = finalWidth + 'px';
+				videoElement.style.height = finalHeight + 'px';
+
+				videoElement.style.left = mcCenterXOnScreen + 'px';
+				videoElement.style.top = mcCenterYOnScreen + 'px';
+			}
 		}
 		this.removeVideoFromStage = function(mcContainer) {
 		    if (mcContainer && mcContainer._htmlVideoElement) {
@@ -23267,7 +23271,7 @@ function handleComplete(evt,comp) {
         <img src="assets/preloader.gif?1762869185927" alt="LOADING" />
     </div>
 	<div id="copyright_text">
-        DAPTeam@2025 V1.0 T2
+        DAPTeam@2025 V1.0 T3
     </div>
 </body>
 </html>
