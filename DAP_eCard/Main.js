@@ -11178,8 +11178,8 @@ lib.properties = {
 	color: "#F3F2EE",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Main_atlas_1.png?1765118056271", id:"Main_atlas_1"},
-		{src:"sounds/holidayweaselkevinmacleod.mp3?1765118056912", id:"holidayweaselkevinmacleod"}
+		{src:"images/Main_atlas_1.png?1765118835604", id:"Main_atlas_1"},
+		{src:"sounds/holidayweaselkevinmacleod.mp3?1765118835914", id:"holidayweaselkevinmacleod"}
 	],
 	preloads: []
 };
